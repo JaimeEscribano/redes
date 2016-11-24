@@ -28,6 +28,10 @@ public class RecolectorCadenas {
             if (comparativa.equals(teclado.nextLine())) break;
         } while(i < 100);
 
-        Files.write(Paths.get("example.txt"),cadenaCadenas, Charset.defaultCharset())
+       try
+       {
+           Files.write(Paths.get("example.txt"),cadenaCadenas, Charset.defaultCharset())
+       } catch (IOException e) {
+e.printStackTrace();
     }
 }
